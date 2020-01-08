@@ -12,9 +12,10 @@ script:
   - make test-client
 
 deploy:
+  skip_cleanup: true
   - provider: script
     script:
-      - echo hello; make push
+      - echo "hello" && echo "goodbye"
     on:
       branch: master
 
